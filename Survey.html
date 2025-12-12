@@ -2,32 +2,128 @@
 <html>
 <body style="background:#FAF3E1; font-family: Arial, sans-serif; color: #84994F;">
 
-<h2>Survey Form</h2>
+<center>
+<table>
+<tr>
+<td>
+<h1>Survey Form</h1>
 
 
-<form action="/action_page.php">
-    
-     <label><h3> What are you? </h3></label>
- <input type="radio" name="gender"> Student <br>
-  <input type="radio" name="gender"> Teacher  <br>
-   <input type="radio" name="gender"> Other
-   <br>
-   <br>
-   <hr>
-   <br>
-     <label for="courseLevel">Favorite Math Topic</label><br>
-      <select id="courseLevel" name="courseLevel">
-        <option>Statistics</option>
-        <option>Arithmetic</option>
-        <option>Geometry</option>
-        <option>Algebra</option>
-        <option>Trigonometry</option>
-      </select>
-      <br><br>
+<form action="#" method="post">
+    <table border="0" cellpadding="8" cellspacing="0">
       
-        <input type="submit" target="confirmation.html">
-    <input type="reset"> 
-</form> 
+      <tr>
+        <td>
+          <label for="grade">1) Grade</label><br>
+          <select id="grade" name="grade">
+            <option>Grade 7</option>
+            <option>Grade 8</option>
+            <option>Grade 9</option>
+            <option>Grade 10</option>
+            <option>Grade 11</option>
+            <option>Grade 12</option>
+          </select>
+        </td>
+      </tr>
 
+      <tr>
+        <td>
+          2) Which math topics interest you? (check all that apply)<br>
+          <input type="checkbox" id="algebra" name="topics" value="algebra">
+          <label for="algebra">Algebra / Number Theory</label><br>
+          <input type="checkbox" id="geometry" name="topics" value="geometry">
+          <label for="geometry">Geometry</label><br>
+          <input type="checkbox" id="combinatorics" name="topics" value="combinatorics">
+          <label for="combinatorics">Combinatorics</label><br>
+          <input type="checkbox" id="calc" name="topics" value="calculus">
+          <label for="calc">Calculus / Analysis</label><br>
+          <input type="checkbox" id="prob" name="topics" value="probability">
+          <label for="prob">Probability / Statistics</label><br>
+          <input type="checkbox" id="applied" name="topics" value="applied">
+          <label for="applied">Applied Math / Modeling</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span>3) Preferred meeting time</span><br>
+          <input type="radio" id="after_school" name="time" value="after_school">
+          <label for="after_school">After school (weekday)</label><br>
+          <input type="radio" id="evening" name="time" value="evening">
+          <label for="evening">Evening</label><br>
+          <input type="radio" id="weekend" name="time" value="weekend">
+          <label for="weekend">Weekend</label><br>
+          <input type="radio" id="no_pref" name="time" value="no_pref">
+          <label for="no_pref">No preference</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="frequency">4) How often do you expect to attend?</label><br>
+          <select id="frequency" name="frequency">
+            <option value="every">Every meeting</option>
+            <option value="most">Most meetings</option>
+            <option value="some">Some meetings</option>
+            <option value="rare">Rarely</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span>5) Are you interested in presenting a short talk or workshop?</span><br>
+          <input type="radio" id="present_yes" name="present" value="yes">
+          <label for="present_yes">Yes</label><br>
+          <input type="radio" id="present_maybe" name="present" value="maybe">
+          <label for="present_maybe">Maybe</label><br>
+          <input type="radio" id="present_no" name="present" value="no">
+          <label for="present_no">No</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span>6) Would you volunteer to help organize events or run activities?</span><br>
+          <input type="checkbox" id="vol_events" name="volunteer" value="events">
+          <label for="vol_events">Events / Logistics</label><br>
+          <input type="checkbox" id="vol_mentoring" name="volunteer" value="mentoring">
+          <label for="vol_mentoring">Peer mentoring / tutoring</label><br>
+          <input type="checkbox" id="vol_publicity" name="volunteer" value="publicity">
+          <label for="vol_publicity">Publicity / Social</label><br>
+          <input type="checkbox" id="vol_none" name="volunteer" value="none">
+          <label for="vol_none">Not at this time</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="rating">7) How interested are you in the Math Club? (1 = low, 5 = high)</label><br>
+          <select id="rating" name="rating">
+            <option value="1">1 - Not Really</option>
+            <option value="2">2 -Kinda</option>
+            <option value="3">3 - Somewhat</option>
+            <option value="4">4 -</option>
+            <option value="5">5 - Very</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label for="comments">8) Anything else you'd like to suggest or share?</label><br>
+          <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Ideas, topics, accessibility needs, etc."></textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="submit" value="Submit Survey">
+          <input type="reset" value="Clear">
+        </td>
+      </tr>
+    </table>
+  </form>
+</center>
 </body>
 </html>
